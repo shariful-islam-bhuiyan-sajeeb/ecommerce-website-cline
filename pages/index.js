@@ -2,8 +2,8 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
-import Nodata from "./Nodata";
-import Details from "./details";
+import Nodata from "../componets/Nodata";
+import Details from "../componets/Details";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -89,7 +89,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-10 bg-slate-200 xl:px-8 lg:px-6 md:px-5 sm:px-4 px-2 rounded">
-            {details ? <Details details={details} /> : <Nodata />}
+            {details ? <Details /> : <Nodata />}
           </div>
         </div>
       </div>
