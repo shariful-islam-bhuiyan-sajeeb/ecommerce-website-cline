@@ -3,12 +3,11 @@ import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import Nodata from "./Nodata";
-import DetalsPage from "./DetalsPage";
+import Details from "./details";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [defaultCard, setDefaultCard] = useState();
   const [userList, setUserList] = useState();
   const [details, setDetails] = useState();
 
@@ -90,7 +89,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-10 bg-slate-200 xl:px-8 lg:px-6 md:px-5 sm:px-4 px-2 rounded">
-            {details ? <DetalsPage details={details} /> : <Nodata />}
+            {details ? <Details details={details} /> : <Nodata />}
           </div>
         </div>
       </div>
