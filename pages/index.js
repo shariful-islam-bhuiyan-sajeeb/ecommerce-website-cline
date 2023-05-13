@@ -2,8 +2,8 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
-import Nodata from "../componets/Nodata";
-import Details from "../componets/Details";
+import Nodata from "../components/Nodata";
+import Details from "../components/Details";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +16,7 @@ export default function Home() {
       .then((res) => res.json())
       .then((data) => setUserList(data));
   }, []);
+  console.log(details);
   return (
     <main className="max-w-7xl mx-auto  my-20">
       <div className=" flex sm:flex-row flex-col lg:px-4 px-2 lg:justify-between justify-center lg:gap-0 gap-6 w-full mx-auto">
@@ -89,7 +90,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-10 bg-slate-200 xl:px-8 lg:px-6 md:px-5 sm:px-4 px-2 rounded">
-            {details ? <Details /> : <Nodata />}
+            {details ? <Details details={details} /> : <Nodata />}
           </div>
         </div>
       </div>

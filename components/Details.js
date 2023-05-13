@@ -8,7 +8,7 @@ const Details = ({ details }) => {
   return (
     <div className="flex lg:flex-row flex-col lg:items-start items-center  xl:gap-x-6 lg:gap-x-4 md:gap-x-3 gap-x-2 py-10 ">
       <div>
-        {/* <img className="rounded-md w-full mx-auto" src={avatar} alt="" /> */}
+        <img className="rounded-md w-full mx-auto" src={avatar} alt="" />
       </div>
       {/* ================ details side  */}
       <div className="flex flex-col  px-2 space-y-3">
